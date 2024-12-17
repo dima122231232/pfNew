@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'SatoshiMedium';
+    src: url('../fonts/satoshi/Satoshi-Medium.otf') format('woff2'),
+         url('../fonts/satoshi/Satoshi-Medium.otf') format('otf');
+}
+@font-face {
+    font-family: 'SatoshiMediumItalic';
+    src: url('../fonts/satoshi/Satoshi-Italic.otf') format('woff2'),
+         url('../fonts/satoshi/Satoshi-Italic.otf') format('otf');
+}
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{font-family: 'SatoshiMediumItalic', sans-serif;}
+span{font-family: 'SatoshiMediumItalic', sans-serif;}
+:root{
+    --index:calc(1vw + 1vh);
+}
+.str,.fr,.burger-str,.burger,.pl_burger{
+    will-change: transform;
+}
+.sec_photo1,.sec_photo2,.sec_photo3,.sec_photo4,.sec_photo5,.sec_photo6,.sec_photo7{
+    will-change: transform;
+}
+        /*HEADER*/
+header{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index:10;
+    pointer-events: none;
+}
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.header_button {
+    background-color: black;
+    width: 140px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 0px 40px 40px 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.burger {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 2.5vw;
+    position: relative;
+    pointer-events: auto;
+}
+
+.str{
+    width:20vw;
+    background-color: black;
+    position: absolute;
+    z-index: -1;
+    right:-40vw;
+    height:100vh;
+    top:0;
+}
+.burger-str{
+    width: 6vw;
+    height: 100%;
+    will-change: width;
+}
+.dob-str{
+    background:black;
+    height: 150%;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 775%;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-6.5%, -50%);
+}
+.fr{
+    position: absolute;
+    right: -20vw;
+    transform: translateX(-100%);
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.pl_burger {
+    width: 30px;
+    height: 2px;
+    margin:3.5px 0;
+    background-color: #fff;
+    position: relative;
+
+}
+        /*MAIN*/
+.section1 {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+.main_photo {
+    position: absolute;
+    left:50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+.sec_photo1 {
+    width:calc(var(--index)*13);
+}
+.sec_photo2 {
+    width:calc(var(--index)*6.864);
+    margin-top: calc(var(--index)*7);
+    margin-left: calc(var(--index)*6.2);
+
+}
+.sec_photo3 {
+    z-index:-1;
+    width:calc(var(--index)*10.66);
+    margin-top: calc(var(--index)*-1.5);
+    margin-left: calc(var(--index)*5.5);
+   
+}
+.sec_photo4 {
+    z-index:-2;
+    width:calc(var(--index)*5.3);
+    margin-top: calc(var(--index)*-5);
+    margin-left: calc(var(--index)*-5.5);
+}
+.sec_photo5 {
+    z-index:-1;
+    width:calc(var(--index)*10);
+    margin-top: calc(var(--index)*3.6);
+    margin-left: calc(var(--index)*-6.1);
+    opacity:0;
+}
+.sec_photo6 {
+    z-index: 2;
+    width:calc(var(--index)*4.23);
+    margin-top: calc(var(--index)*12);
+    margin-left: calc(var(--index)*-5.6);
+}
+.sec_photo7 {
+    z-index: -1;
+    width:calc(var(--index)*17.3);
+    margin-top: calc(var(--index)*13.5);
+    margin-left: calc(var(--index)*1.6);
+}
+.marquee {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+  .marquee-content {
+    display: inline-flex;
+    white-space: nowrap;
+    position: relative;
+    font-size: clamp(50px, calc(2.5vw + 20px), 81px);
+    will-change: transform;
+    transform: translateX(-50%);
+    top:100px;
+  }
+  .asd{
+    font-family: 'SatoshiMedium', sans-serif;
+  }
+  .dot{
+    position: relative;
+    top:-6px;
+    padding: 0 2.2vw;
+  }
+
+          /*SECTION2*/
+.section2{
+    height:100vh;
+    position: relative;
+    background-color: aqua;
+}
+.content {
+    min-height: 200vh; /* Для тестирования увеличь высоту */
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.content {
+    outline: 5px solid red;
+}
+
+.wrapper {
+    outline: 5px solid blue;
+}
